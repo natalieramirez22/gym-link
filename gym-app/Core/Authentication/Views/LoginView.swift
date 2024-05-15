@@ -46,13 +46,15 @@ struct LoginView: View {
 //                        try await viewModel.signIn(withEmail: email, password: password)
 //                    }
                 } label: {
-                    HStack {
-                        Text("SIGN IN")
-                            .fontWeight(.semibold)
-                        Image(systemName: "arrow.right")
+                    NavigationLink(destination: HomeView()) {
+                        HStack {
+                            Text("SIGN IN")
+                                .fontWeight(.semibold)
+                            Image(systemName: "arrow.right")
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: UIScreen.main.bounds.width - 32, height: 48)
                     }
-                    .foregroundColor(.white)
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 48)
                 }
                 .background(Color(.systemBlue))
                 .cornerRadius(30)
